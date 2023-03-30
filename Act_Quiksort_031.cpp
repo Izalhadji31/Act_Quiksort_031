@@ -7,7 +7,7 @@ int mov_count = 0;
 int n;
 
 void input() {
-
+    whi
 }
 int main()
 {
