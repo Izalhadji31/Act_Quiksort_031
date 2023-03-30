@@ -35,6 +35,51 @@ void swap(int x, int y)
     arr[y] = temp;
 }
 
+void q_short(int low, int high)
+{
+    int pivot, i, j;
+    if (low > high)
+        return;
+
+    pivot = arr[low];
+
+    i = low + i;
+    j = high;
+
+    while (i <= j)
+    {
+        while ((arr[i] <= pivot) && (i <= high))
+        {
+            i++;
+            cmp_count++;
+        }
+        cmp_count++;
+
+        while ((arr[i] <= pivot) && (i <= low))
+        {
+            j--;
+            cmp_count++;
+        }
+        cmp_count++;
+
+        if (i < j);
+        {
+            swap(i, j);
+            mov_count++;
+        }
+
+    }
+
+    if (low < j)
+    {
+        swap(low, j);
+        mov_count++;
+    }
+    q_short(low, j - 1);
+
+    q_short(j + 1, high);
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
