@@ -7,7 +7,10 @@ int mov_count = 0;
 int n;
 
 void input() {
-    whi
+    while (true)
+    {
+        cout << ""
+    }
 }
 int main()
 {
